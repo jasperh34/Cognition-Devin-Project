@@ -52,7 +52,7 @@ ngrok http 8000
  
 Copy the HTTPS forwarding URL as this is the URL needed for setting up the webhook.
  
-### 5. GitHub webhook
+### 4. GitHub webhook
  
 In working repository: Settings → Webhooks → Add webhook using the URL, and setting content type to `application/json`
  
@@ -81,7 +81,7 @@ To trigger Devin, add label **`devin`** to any issue.
 
 ## Result
  
-**Devin outputs PRs:** The automation creates pull requests rather than merging directly.
+The automation creates pull requests rather than merging directly.
 
  
 ## Notes for further improvement
