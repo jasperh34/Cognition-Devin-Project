@@ -86,8 +86,8 @@ The automation creates pull requests rather than merging directly.
  
 ## Notes for further improvement
  
-**Storage:** Task state is stored in a local `tasks.json` file. In production I would use a durable database such as Postgres, keyed by GitHub issue URL to guarantee idempotency across webhook retries.
+**Storage:** Task state is stored in a local `tasks.json` file. In production I would use a more durable database.
  
-**Status refresh:** The current system requires manual `POST /tasks/{id}/refresh` calls to update session status. In production I would add a background polling worker or scheduled job to refresh active sessions automatically.
+**Status refresh:** The current system requires manual `POST /tasks/{id}/refresh` calls to update session status. I would add a background polling worker or scheduled job to refresh active sessions automatically.
  
  
