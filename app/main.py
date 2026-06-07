@@ -105,14 +105,6 @@ async def github_webhook(request: Request):
         "body": github_issue.get("body") or "",
     }
 
-    issue = {
-        "repo_url": repository.get("html_url"),
-        "issue_number": github_issue.get("number"),
-        "issue_url": github_issue.get("html_url"),
-        "title": github_issue.get("title"),
-        "body": github_issue.get("body") or "",
-    }
-
     issue = validate_issue(issue)
 
     # if GitHub sends the same issue event more than once, we must avoid creating duplicated Devin sessions
